@@ -200,10 +200,11 @@ L2/L3 EXECUTION
 
 ## Design Decisions & Assumptions
 
-### 1. LLM Choice: Google Gemini (gemini-1.5-flash)
+### 1. LLM Choice: Google Gemini (gemini-2.5-flash)
 - Free tier with generous limits (no credit card)
 - `gemini-1.5-flash` is fast, capable, and sufficient for orchestration reasoning
 - Integrated via LangChain's `ChatGoogleGenerativeAI`
+- We need to purchase the api key for accessing the resources needed.
 
 ### 2. L1 Reasoning is LLM-Powered
 Rather than hardcoded rules, L1 uses an LLM with a carefully crafted system prompt that enforces visibility rules. This means:

@@ -1,0 +1,10 @@
+{
+  "message_id": "MSG-104",
+  "source": "meeting",
+  "sender": {
+    "name": "System",
+    "role": "Meeting Bot"
+  },
+  "content": "Dev: I'm blocked on API integration, staging is down. QA: Found 3 critical bugs in payment flow. Designer: Mobile mockups ready by Thursday. Tech Lead: We might need to refactor the auth module.",
+  "project": "PRJ-ALPHA"
+}

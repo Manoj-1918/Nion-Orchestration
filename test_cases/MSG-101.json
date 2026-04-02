@@ -1,0 +1,10 @@
+{
+  "message_id": "MSG-101",
+  "source": "slack",
+  "sender": {
+    "name": "John Doe",
+    "role": "Engineering Manager"
+  },
+  "content": "What's the status of the authentication feature?",
+  "project": "PRJ-BETA"
+}

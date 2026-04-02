@@ -1,0 +1,10 @@
+{
+  "message_id": "MSG-103",
+  "source": "email",
+  "sender": {
+    "name": "Mike Johnson",
+    "role": "VP Engineering"
+  },
+  "content": "Should we prioritize security fixes or the new dashboard?",
+  "project": "PRJ-GAMMA"
+}

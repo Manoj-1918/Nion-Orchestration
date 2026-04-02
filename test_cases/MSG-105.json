@@ -1,0 +1,10 @@
+{
+  "message_id": "MSG-105",
+  "source": "email",
+  "sender": {
+    "name": "Lisa Wong",
+    "role": "Customer Success Manager"
+  },
+  "content": "The client is asking why feature X promised for Q3 is still not delivered. They're threatening to escalate to legal. What happened?",
+  "project": "PRJ-DELTA"
+}

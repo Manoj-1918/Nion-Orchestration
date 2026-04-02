@@ -1,0 +1,10 @@
+{
+  "message_id": "MSG-106",
+  "source": "slack",
+  "sender": {
+    "name": "Random User",
+    "role": "Unknown"
+  },
+  "content": "We need to speed things up",
+  "project": null
+}

@@ -1,0 +1,10 @@
+{
+  "message_id": "MSG-102",
+  "source": "email",
+  "sender": {
+    "name": "Sarah Chen",
+    "role": "Product Manager"
+  },
+  "content": "Can we add SSO integration before the December release?",
+  "project": "PRJ-ALPHA"
+}

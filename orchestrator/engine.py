@@ -20,12 +20,12 @@ SEPARATOR = "=" * 78
 
 
 class NionOrchestrationEngine:
-    def __init__(self, api_key: str, model: str = "gemini-2.0-flash"):
+    def __init__(self, api_key: str, model: str = "gemini-2.5-flash"):
         self.llm = ChatGoogleGenerativeAI(
             model=model,
             google_api_key=api_key,
             temperature=0.3,
-            max_output_tokens=150
+            #max_output_tokens=8192,   # prevent truncated JSON responses
         )
         self.l1 = L1Orchestrator(self.llm)
         self.l2 = L2Coordinator(self.llm)

@@ -5,18 +5,19 @@ and aggregates results.
 L2 VISIBILITY: Can see its own L3 agents + Cross-Cutting agents.
 L2 CANNOT see L3 agents of other domains.
 """
-import json
-import re
 import time
+import json
 import logging
 from typing import List, Dict
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage, SystemMessage
+
 from .models import (
     Message, PlannedTask, L2Result, L3Result,
     L2Domain, L3_AGENTS_BY_DOMAIN
 )
 from .l3_agents import L3AgentExecutor
+from .json_utils import extract_json
 
 logger = logging.getLogger(__name__)
 
@@ -126,11 +127,7 @@ class L2Coordinator:
             try:
                 response = self.llm.invoke(lc_messages)
                 raw = response.content.strip()
-                raw = re.sub(r"^```(?:json)?\s*", "", raw, flags=re.MULTILINE)
-                raw = re.sub(r"\s*```\s*$", "", raw, flags=re.MULTILINE)
-                raw = raw.strip()
-
-                data = json.loads(raw)
+                data = extract_json(raw)
 
                 if not isinstance(data, dict) or "agents_to_invoke" not in data:
                     raise ValueError("Missing 'agents_to_invoke' key")
